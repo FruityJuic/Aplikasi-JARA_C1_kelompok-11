@@ -24,6 +24,5 @@ Penambahan kebutuhan fungsional sistem untuk pertemuan 3
 
 | ID | Deskripsi Kebutuhan Fungsional | Penanggung Jawab |
 |---|---|---|
-| **FR-10** | Pengguna dapat membuat daftar tugas baru dengan otomatis menjadi pemiliknya serta
-              menghapus daftar yang dimilikinya beserta seluruh tugas dan anggota di dalamnya | Arga, Haikal, Yoga |
+| **FR-10** | Pengguna dapat membuat daftar tugas baru dengan otomatis menjadi pemiliknya serta menghapus daftar yang dimilikinya beserta seluruh tugas dan anggota di dalamnya | Arga, Haikal, Yoga |
 
