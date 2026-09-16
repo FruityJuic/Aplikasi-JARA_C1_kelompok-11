@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Pendaftaran Praktikum</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sistem Pendaftaran Praktikum</h1>
+    <div class="header-info">
+      <span id="jam"></span>
+      <span id="browser-info"></span>
+    </div>
+  </header>
+  <main>
+    <form id="form-daftar">
+      <h2>Formulir Pendaftaran</h2>
+      <div class="form-group">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+        <span class="error-msg" id="nama-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="nim">NIM</label>
+        <input type="text" id="nim" name="nim" placeholder="Masukkan NIM">
+        <span class="error-msg" id="nim-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="fakultas">Fakultas</label>
+        <select id="fakultas" name="fakultas">
+          <option value="">-- Pilih Fakultas --</option>
+        </select>
+        <span class="error-msg" id="fakultas-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="prodi">Program Studi</label>
+        <select id="prodi" name="prodi" disabled>
+          <option value="">-- Pilih Program Studi --</option>
+        </select>
+        <span class="error-msg" id="prodi-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="mk">Mata Kuliah Praktikum</label>
+        <div class="mk-row">
+          <select id="mk" name="mk">
+            <option value="">-- Pilih Mata Kuliah --</option>
+          </select>
+          <button type="button" id="btn-tambah-mk">Tambah</button>
+        </div>
+        <ul id="daftar-mk"></ul>
+        <p class="mk-count">Jumlah dipilih: <span id="jumlah-mk">0</span></p>
+        <span class="error-msg" id="mk-error"></span>
+      </div>
+      <button type="submit">Daftar</button>
+    </form>
+    <div id="ringkasan" class="ringkasan" style="display: none;">
+      <h2>Ringkasan Pendaftaran</h2>
+      <div class="ringkasan-item">
+        <span class="ringkasan-label">Nama:</span>
+        <span id="ring-nama"></span>
+      </div>
+      <div class="ringkasan-item">
+        <span class="ringkasan-label">NIM:</span>
+        <span id="ring-nim"></span>
+      </div>
+      <div class="ringkasan-item">
+        <span class="ringkasan-label">Fakultas:</span>
+        <span id="ring-fakultas"></span>
+      </div>
+      <div class="ringkasan-item">
+        <span class="ringkasan-label">Program Studi:</span>
+        <span id="ring-prodi"></span>
+      </div>
+      <div class="ringkasan-item">
+        <span class="ringkasan-label">Mata Kuliah:</span>
+        <ul id="ring-mk"></ul>
+      </div>
+      <button type="button" id="btn-daftar-ulang">Daftar Ulang</button>
+    </div>
+  </main>
+  <footer>
+    <p>Sistem Pendaftaran Praktikum &copy; 2026</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
