@@ -11,9 +11,20 @@ class Task extends Model
         'task_list_id',
         'user_id',
         'title',
-        'status',
+        'description',
+        'priority',
+        'due_date',
+        'is_completed',
     ];
 
+    protected $casts = [
+        'due_date' => 'datetime',
+        'is_completed' => 'boolean',
+    ];
+
+    /**
+     * Task berada di dalam satu list.
+     */
     public function taskList(): BelongsTo
     {
         return $this->belongsTo(
@@ -22,6 +33,9 @@ class Task extends Model
         );
     }
 
+    /**
+     * Task dimiliki oleh satu user.
+     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(
