@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Task extends Model
 {
     protected $fillable = [
-        'list_id',
+        'task_list_id',
         'user_id',
         'title',
         'description',
@@ -27,7 +27,10 @@ class Task extends Model
      */
     public function taskList(): BelongsTo
     {
-        return $this->belongsTo(TaskList::class, 'list_id');
+        return $this->belongsTo(
+            TaskList::class,
+            'task_list_id'
+        );
     }
 
     /**
@@ -35,6 +38,9 @@ class Task extends Model
      */
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(
+            User::class,
+            'user_id'
+        );
     }
 }
