@@ -3,6 +3,7 @@ Aplikasi web untuk mengelola tugas tim atau pribadi
 ## 1. Spesifikasi Kebutuhan Fungsional (Functional Requirements)
 
 **PERTEMUAN 2** PM = Arga
+
 Berikut adalah daftar kebutuhan fungsional sistem yang telah dipetakan berdasarkan modul dan penanggung jawab pengembangannya:
 
 | ID | Deskripsi Kebutuhan Fungsional | Penanggung Jawab |
