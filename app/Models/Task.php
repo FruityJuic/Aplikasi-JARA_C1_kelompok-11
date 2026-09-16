@@ -3,12 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Task extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
         'list_id',
         'user_id',
@@ -20,16 +18,22 @@ class Task extends Model
     ];
 
     protected $casts = [
-        'due_date' => 'date',
+        'due_date' => 'datetime',
         'is_completed' => 'boolean',
     ];
 
-    public function list()
+    /**
+     * Task berada di dalam satu list.
+     */
+    public function taskList(): BelongsTo
     {
         return $this->belongsTo(TaskList::class, 'list_id');
     }
 
-    public function user()
+    /**
+     * Task dimiliki oleh satu user.
+     */
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
